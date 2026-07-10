@@ -807,3 +807,16 @@ footer p {
 
 
 }
+/* Clickable logo */
+
+.logo {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
