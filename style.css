@@ -820,3 +820,100 @@ footer p {
     cursor: pointer;
 
 }
+/* ==========================
+   NAVBAR HOVER EFFECT
+========================== */
+
+
+header nav a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    transition: 
+        transform 0.25s ease,
+        color 0.25s ease,
+        text-shadow 0.25s ease;
+
+}
+
+
+
+
+
+header nav a:hover {
+
+
+    transform: translateY(-4px) scale(1.08);
+
+
+    color: #b58cff;
+
+
+    text-shadow:
+
+        0 0 8px rgba(181, 140, 255, 0.8),
+
+        0 0 18px rgba(181, 140, 255, 0.6),
+
+        0 0 30px rgba(181, 140, 255, 0.4);
+
+
+}
+
+
+
+
+
+
+
+/* Small underline animation */
+
+
+header nav a::after {
+
+
+    content: "";
+
+
+    position: absolute;
+
+
+    left: 50%;
+
+
+    bottom: -8px;
+
+
+    width: 0;
+
+
+    height: 3px;
+
+
+    background: #b58cff;
+
+
+    border-radius: 10px;
+
+
+    transform: translateX(-50%);
+
+
+    transition: width 0.25s ease;
+
+
+}
+
+
+
+
+
+header nav a:hover::after {
+
+
+    width: 100%;
+
+
+}
