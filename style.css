@@ -620,3 +620,41 @@ footer p {
     font-weight: bold;
 
 }
+/* ==========================
+   COMMANDS PAGE
+========================== */
+
+
+.commands-page {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+
+.command-card {
+
+    min-height: 350px;
+
+}
+
+
+
+.command-card strong {
+
+    color: #7b61ff;
+
+}
+
+
+
+.cta {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
