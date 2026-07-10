@@ -234,3 +234,280 @@ section h2 {
     margin-bottom: 50px;
 
 }
+/* ===========================
+   FEATURE CARDS
+=========================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+}
+
+.card {
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    transition: .3s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #7b61ff;
+
+    box-shadow: 0 15px 35px rgba(123,97,255,.25);
+
+}
+
+.card h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 1.4rem;
+
+}
+
+.card p {
+
+    color: #bdbdbd;
+
+}
+
+/* ===========================
+   STATUS
+=========================== */
+
+.status {
+
+    text-align: center;
+
+}
+
+.status p {
+
+    color: #c9c9c9;
+
+    font-size: 1.1rem;
+
+    margin-top: 12px;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+
+    background: #0b0d12;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+}
+
+footer p {
+
+    color: #9f9f9f;
+
+    margin-bottom: 10px;
+
+}
+
+.footer-links {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-links a {
+
+    color: #bfbfbf;
+
+    text-decoration: none;
+
+    transition: .25s;
+
+}
+
+.footer-links a:hover {
+
+    color: #7b61ff;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #11131a;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #7b61ff;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #927cff;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.hero h1 {
+
+    animation: fadeUp .8s ease;
+
+}
+
+.hero p {
+
+    animation: fadeUp 1.1s ease;
+
+}
+
+.buttons {
+
+    animation: fadeUp 1.4s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top: 120px;
+
+        padding-bottom: 80px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .buttons a {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+    section {
+
+        padding: 70px 7%;
+
+    }
+
+}
