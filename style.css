@@ -1,0 +1,236 @@
+/*
+==========================================
+MeowBot Website
+Developer: r4z3_chan
+==========================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: #0f1117;
+
+    color: #ffffff;
+
+    line-height: 1.7;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+
+    width: 100%;
+
+    padding: 22px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(20,20,30,.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.logo {
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+nav a {
+
+    color: #cfcfcf;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .25s;
+
+}
+
+nav a:hover {
+
+    color: #7b61ff;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+
+        radial-gradient(circle at top,
+        rgba(123,97,255,.35),
+        transparent 55%),
+
+        linear-gradient(#0f1117,#161922);
+
+}
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+
+}
+
+.hero p {
+
+    max-width: 720px;
+
+    color: #bdbdbd;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 45px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+.buttons a {
+
+    text-decoration: none;
+
+    padding: 15px 34px;
+
+    border-radius: 14px;
+
+    font-weight: 700;
+
+    transition: .25s;
+
+}
+
+.primary {
+
+    background: #7b61ff;
+
+    color: white;
+
+}
+
+.primary:hover {
+
+    background: #927cff;
+
+    transform: translateY(-3px);
+
+}
+
+.secondary {
+
+    border: 2px solid #7b61ff;
+
+    color: #ffffff;
+
+}
+
+.secondary:hover {
+
+    background: #7b61ff;
+
+    transform: translateY(-3px);
+
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section {
+
+    padding: 90px 8%;
+
+}
+
+section h2 {
+
+    text-align: center;
+
+    font-size: 2.4rem;
+
+    margin-bottom: 50px;
+
+}
