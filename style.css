@@ -1254,3 +1254,122 @@ header nav a:hover::after {
     margin-bottom: 20px;
 
 }
+/* ==========================
+   MOBILE NAVBAR
+========================== */
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+@media screen and (max-width: 850px) {
+
+
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+
+
+.menu-toggle {
+
+    display: block;
+
+}
+
+
+
+
+
+.navbar {
+
+
+    position: absolute;
+
+    top: 80px;
+
+    left: 0;
+
+    width: 100%;
+
+
+    display: none;
+
+
+    flex-direction: column;
+
+
+    background: rgba(15, 15, 25, 0.95);
+
+
+    backdrop-filter: blur(15px);
+
+
+    padding: 30px 0;
+
+
+    text-align: center;
+
+
+    z-index: 1000;
+
+
+}
+
+
+
+
+
+.navbar.active {
+
+
+    display: flex;
+
+
+}
+
+
+
+
+
+.navbar a {
+
+
+    margin: 15px 0;
+
+
+    font-size: 1.2rem;
+
+
+}
+
+
+
+
+}
