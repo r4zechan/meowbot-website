@@ -1115,3 +1115,94 @@ header nav a:hover::after {
 
 
 }
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+
+.about-content {
+
+
+    max-width: 850px;
+
+
+    margin: 40px auto;
+
+
+    padding: 40px;
+
+
+    background: rgba(255,255,255,0.05);
+
+
+    border-radius: 25px;
+
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+
+    line-height: 1.8;
+
+
+    font-size: 1.05rem;
+
+
+    backdrop-filter: blur(10px);
+
+
+
+}
+
+
+
+
+
+.about-content strong {
+
+
+    color: #b58cff;
+
+
+}
+
+
+
+
+
+.about-content ul {
+
+
+    margin: 25px 0;
+
+
+    padding-left: 30px;
+
+
+}
+
+
+
+
+
+.about-content li {
+
+
+    margin: 12px 0;
+
+
+    transition: transform 0.25s ease;
+
+
+}
+
+
+
+
+
+.about-content li:hover {
+
+
+    transform: translateX(8px);
+
+
+}
