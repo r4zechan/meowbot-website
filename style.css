@@ -1206,3 +1206,13 @@ header nav a:hover::after {
 
 
 }
+/* ==========================
+   CHANGELOG SECTION
+========================== */
+
+
+#changelog {
+
+    padding-top: 80px;
+
+}
