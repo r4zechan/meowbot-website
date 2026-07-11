@@ -1216,3 +1216,41 @@ header nav a:hover::after {
     padding-top: 80px;
 
 }
+/* ==========================
+   PREMIUM PAGE
+========================== */
+
+
+.premium-section,
+.premium-info {
+
+    padding: 80px 20px;
+
+}
+
+
+
+.premium-hero {
+
+    text-align: center;
+
+}
+
+
+
+
+.cta {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+
+.cta h2 {
+
+    margin-bottom: 20px;
+
+}
