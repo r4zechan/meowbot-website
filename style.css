@@ -1565,3 +1565,9 @@ header nav a:hover::after {
     }
 
 }
+
+.navbar {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
