@@ -371,4 +371,34 @@ Commands
 
 </body>
 
+<script>
+
+const menuButton = document.querySelector(".menu-toggle");
+
+const navbar = document.querySelector(".navbar");
+
+const links = document.querySelectorAll(".navbar a");
+
+
+menuButton.addEventListener("click", () => {
+
+    navbar.classList.toggle("active");
+
+});
+
+
+
+links.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navbar.classList.remove("active");
+
+    });
+
+});
+
+
+</script>
+
 </html>
