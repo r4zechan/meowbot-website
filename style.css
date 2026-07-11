@@ -1277,13 +1277,192 @@ header nav a:hover::after {
 
 
 
+/* ==========================
+   PREMIUM MOBILE MENU
+========================== */
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    z-index: 2001;
+
+}
+
+
+
+
+
+
+.mobile-overlay {
+
+
+    display: none;
+
+
+}
+
+
+
+
+
 
 
 @media screen and (max-width: 850px) {
 
 
 
-header {
+.menu-toggle {
+
+    display: block;
+
+}
+
+
+
+
+
+.navbar {
+
+
+    position: fixed;
+
+
+    top: 0;
+
+
+    right: -320px;
+
+
+    width: 300px;
+
+
+    height: 100vh;
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    justify-content: center;
+
+
+    align-items: center;
+
+
+    gap: 25px;
+
+
+    background:
+
+    rgba(20,20,35,0.98);
+
+
+
+    backdrop-filter: blur(20px);
+
+
+    border-left:
+
+    1px solid rgba(181,140,255,0.3);
+
+
+    transition:
+
+    right 0.35s ease;
+
+
+    z-index: 2000;
+
+
+}
+
+
+
+
+
+.navbar.active {
+
+
+    right: 0;
+
+
+}
+
+
+
+
+
+
+
+.mobile-overlay {
+
+
+    position: fixed;
+
+
+    inset: 0;
+
+
+    background:
+
+    rgba(0,0,0,0.55);
+
+
+    backdrop-filter: blur(5px);
+
+
+    z-index: 1500;
+
+
+    display: none;
+
+
+}
+
+
+
+
+
+
+.mobile-overlay.active {
+
+
+    display: block;
+
+
+}
+
+
+
+
+
+.navbar a {
+
+
+    font-size: 1.3rem;
+
+
+}
+
+
+
+
+
+}
 
     display: flex;
 
