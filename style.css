@@ -1552,3 +1552,16 @@ header nav a:hover::after {
 
 
 }
+@media screen and (min-width: 851px) {
+
+    .navbar {
+
+        display: flex !important;
+
+        align-items: center;
+
+        gap: 30px;
+
+    }
+
+}
