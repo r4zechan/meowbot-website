@@ -1871,3 +1871,528 @@ section {
         rotate(90deg);
 
 }
+
+/* ==========================
+   PREMIUM PAGE V2
+========================== */
+
+
+/* PREMIUM HERO */
+
+.premium-hero {
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 20px;
+
+}
+
+
+
+.premium-glow {
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(181,140,255,.35),
+            transparent 70%
+        );
+
+    filter:blur(40px);
+
+    z-index:-1;
+
+    animation:
+
+        premiumFloat 6s infinite alternate;
+
+}
+
+
+
+@keyframes premiumFloat {
+
+
+    from {
+
+        transform:translateY(-40px);
+
+    }
+
+
+    to {
+
+        transform:translateY(40px);
+
+    }
+
+}
+
+
+
+
+.premium-hero h1 {
+
+    max-width:900px;
+
+    font-size:
+
+        clamp(3rem,6vw,5.5rem);
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c084fc,
+            #facc15
+        );
+
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+
+.premium-hero h1 span {
+
+    color:#c084fc;
+
+}
+
+
+
+.premium-hero p {
+
+    max-width:750px;
+
+    margin:30px auto;
+
+    color:#b5b5c5;
+
+    font-size:1.2rem;
+
+}
+
+
+
+
+
+/* PREMIUM BADGE */
+
+
+.premium-badge {
+
+
+    background:
+
+        rgba(250,204,21,.15);
+
+
+    border:
+
+        1px solid rgba(250,204,21,.5);
+
+
+    color:#fde68a;
+
+
+}
+
+
+
+
+
+
+/* FEATURE CARDS */
+
+
+.premium-cards {
+
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+}
+
+
+
+.premium-feature {
+
+
+    border:
+
+        1px solid rgba(181,140,255,.25);
+
+
+}
+
+
+
+.premium-feature:hover {
+
+
+    border-color:#c084fc;
+
+
+    box-shadow:
+
+        0 25px 70px rgba(192,132,252,.35);
+
+
+}
+
+
+
+
+
+
+/* PRICING */
+
+
+.premium-pricing {
+
+
+    text-align:center;
+
+}
+
+
+
+.pricing-container {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.pricing-card {
+
+
+    width:360px;
+
+    padding:45px 35px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+        rgba(255,255,255,.06);
+
+
+    border:
+
+        1px solid rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+
+        var(--shadow);
+
+
+    position:relative;
+
+
+    transition:.35s ease;
+
+}
+
+
+
+.pricing-card:hover {
+
+
+    transform:
+
+        translateY(-12px);
+
+
+}
+
+
+
+.pricing-card h3 {
+
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.price {
+
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    color:#c084fc;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.price span {
+
+
+    display:block;
+
+    font-size:.9rem;
+
+    color:#999;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+
+.pricing-card ul {
+
+
+    list-style:none;
+
+    text-align:left;
+
+}
+
+
+
+.pricing-card li {
+
+
+    margin:18px 0;
+
+    color:#ddd;
+
+
+}
+
+
+
+
+
+/* PREMIUM HIGHLIGHT */
+
+
+.premium-highlight {
+
+
+    border:
+
+        2px solid #c084fc;
+
+
+    transform:
+
+        scale(1.05);
+
+
+}
+
+
+
+.premium-highlight:hover {
+
+
+    transform:
+
+        scale(1.08)
+        translateY(-12px);
+
+
+}
+
+
+
+.popular-badge {
+
+
+    position:absolute;
+
+
+    top:-18px;
+
+
+    left:50%;
+
+
+    transform:
+
+        translateX(-50%);
+
+
+    padding:
+
+        8px 25px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #c084fc,
+            #facc15
+        );
+
+
+    color:#090b10;
+
+
+    font-weight:900;
+
+
+    font-size:.8rem;
+
+
+}
+
+
+
+
+
+
+/* PREMIUM CTA */
+
+
+.premium-cta {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.premium-cta::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(192,132,252,.2),
+            transparent 60%
+        );
+
+
+    z-index:-1;
+
+
+}
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+    .pricing-card {
+
+
+        width:100%;
+
+
+    }
+
+
+    .premium-highlight {
+
+
+        transform:none;
+
+
+    }
+
+
+    .premium-highlight:hover {
+
+
+        transform:
+
+            translateY(-10px);
+
+
+    }
+
+
+}
