@@ -20,22 +20,15 @@ document.addEventListener(
 
 
         const menuButton =
-            document.querySelector(
-                ".menu-toggle"
-            );
+            document.querySelector(".menu-toggle");
 
 
         const navbar =
-            document.querySelector(
-                ".navbar"
-            );
+            document.querySelector(".navbar");
 
 
 
-        if (
-            menuButton &&
-            navbar
-        ) {
+        if(menuButton && navbar){
 
 
             menuButton.addEventListener(
@@ -43,14 +36,9 @@ document.addEventListener(
                 () => {
 
 
-                    navbar.classList.toggle(
-                        "active"
-                    );
+                    navbar.classList.toggle("active");
 
-
-                    menuButton.classList.toggle(
-                        "open"
-                    );
+                    menuButton.classList.toggle("open");
 
 
                 }
@@ -58,42 +46,29 @@ document.addEventListener(
 
 
 
-            const links =
-                document.querySelectorAll(
-                    ".navbar a"
+            document
+            .querySelectorAll(".navbar a")
+            .forEach(link => {
+
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+
+                        navbar.classList.remove("active");
+
+                        menuButton.classList.remove("open");
+
+
+                    }
                 );
 
 
-
-            links.forEach(
-                link => {
-
-
-                    link.addEventListener(
-                        "click",
-                        () => {
-
-
-                            navbar.classList.remove(
-                                "active"
-                            );
-
-
-                            menuButton.classList.remove(
-                                "open"
-                            );
-
-
-                        }
-                    );
-
-
-                }
-            );
+            });
 
 
         }
-
 
 
 
@@ -107,22 +82,15 @@ document.addEventListener(
 
 
         const year =
-            document.querySelector(
-                ".current-year"
-            );
-
+            document.querySelector(".current-year");
 
 
         if(year){
 
-
             year.textContent =
-                new Date()
-                .getFullYear();
-
+                new Date().getFullYear();
 
         }
-
 
 
 
@@ -142,57 +110,67 @@ document.addEventListener(
 
 
 
-        const observer =
-            new IntersectionObserver(
-                entries => {
+        if(
+            "IntersectionObserver" in window
+        ){
 
 
-                    entries.forEach(
-                        entry => {
+            const observer =
+                new IntersectionObserver(
+                    entries => {
 
 
-                            if(
-                                entry.isIntersecting
-                            ){
+                        entries.forEach(
+                            entry => {
 
 
-                                entry.target.classList.add(
-                                    "visible"
-                                );
+                                if(entry.isIntersecting){
+
+
+                                    entry.target.classList.add(
+                                        "visible"
+                                    );
+
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+
+                                }
 
 
                             }
+                        );
 
 
-                        }
+                    },
+                    {
+                        threshold:0.15
+                    }
+                );
+
+
+
+            revealElements.forEach(
+                element => {
+
+
+                    element.classList.add(
+                        "hidden"
                     );
 
 
-                },
-                {
-                    threshold:0.15
+                    observer.observe(
+                        element
+                    );
+
+
                 }
             );
 
 
-
-        revealElements.forEach(
-            element => {
-
-
-                element.classList.add(
-                    "hidden"
-                );
-
-
-                observer.observe(
-                    element
-                );
-
-
-            }
-        );
-
+        }
 
 
 
@@ -200,7 +178,7 @@ document.addEventListener(
 
         /*
         ==========================
-        SMOOTH ANCHOR FIX
+        SMOOTH ANCHOR SCROLL
         ==========================
         */
 
@@ -209,51 +187,42 @@ document.addEventListener(
         .querySelectorAll(
             'a[href^="#"]'
         )
-        .forEach(
-            anchor => {
+        .forEach(anchor => {
 
 
-                anchor.addEventListener(
-                    "click",
-                    function(e){
+            anchor.addEventListener(
+                "click",
+                function(e){
 
 
-                        const target =
-                            document.querySelector(
-                                this.getAttribute(
-                                    "href"
-                                )
-                            );
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
 
 
 
-                        if(target){
+                    if(target){
 
 
-                            e.preventDefault();
+                        e.preventDefault();
 
 
-
-                            target.scrollIntoView(
-                                {
-                                    behavior:
-                                    "smooth"
-                                }
-                            );
-
-
-                        }
+                        target.scrollIntoView(
+                            {
+                                behavior:"smooth"
+                            }
+                        );
 
 
                     }
-                );
 
 
-            }
-        );
+                }
+            );
 
 
-
+        });
 
 
 
